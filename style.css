@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('fuentes/montserrat/Montserrat-SemiBold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url('fuentes/montserrat/Montserrat-Light.otf') format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumWebLight';
+    src: url('fuentes/titilliumWeb/TitilliumWeb-Light.ttf') format('truetype');
+} 
+@font-face {
+    font-family: 'TitilliumWebBold';
+    src: url('fuentes/titilliumWeb/TitilliumWeb-Bold.ttf') format('truetype');
+} 
+.img-redonda{
+    border-radius: 50%; 
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover; 
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+.d-flex{
+    height: 300px; 
+}
+.row{
+    margin-bottom: 5%;
+}
+.margen-parrafo{
+    text-align: left;
+    margin:40px;
+}
+.caja-texto{
+    border: 0px solid #000;
+    background-color: #f9f1e6;
+}
+.fuente-titulo{
+    font-family:'TitilliumWebBold', sans-serif;
+    color: #9f978c
+}
+.fuente-subtitulo{
+    font-family:'TitilliumWebBold', sans-serif;
+}
+.fuente-parrafo{
+    font-family: 'TitilliumWebLight';
+    font-size:medium;
+}
+.espacio-parrafo{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.distancia-botones{
+    margin-right: 40%; 
+}
+.boton-perfil {
+    height: 20%;
+    width: 30%;
+    color: #483f34;
+    background-color: transparent;
+    border-color: #000000;
+    border-radius: 5px; 
+    font-size: large;
+}
+.boton-editar {
+    height: 10%;
+    width: 20%;
+    color: #483f34;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 5px; 
+    font-size: small;
+}
+.modal-content{
+    border-radius: 5px !important;
+}
+.boton-modal{
+    color: #483f34;
+    background-color: transparent !important;
+    border-color: #000000 !important;
+    border-radius: 5px; 
+    font-size: large;
+}
+.modal-header{
+    background-color: #f9f1e6; 
+}
+.modal-title{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.btn-close{
+    margin-right: 15px !important;
+}
+.modal-footer{
+    margin-right: 25px;
+    margin-bottom: 20px;
+    border: 0px !important;
+}
+.form-control::placeholder {
+    color: #999 !important; /* Color del placeholder */
+    opacity: 0.5 !important; 
+}
+.modal-body{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.hipervinculo{
+    color: rgb(0, 0, 0);
+}
+.nv-color {
+    background-image: url(imagenes/fondo-navbar.png);
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+body {
+    background-image: url(imagenes/fondoBlanco-01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.info {
+    background-image: url(imagenes/degradado-banco.png);
+    background-size: cover;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    margin-left: 15px;
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 100px;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+}
+
+.carousel-item img {
+    object-fit: cover;
+}
+
+.logo-centro {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.desc-div {
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.desc {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.art-gal {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.art-gal section {
+    background-color: white;
+    display: flex;
+    width: 1450px;
+    height: 500px;
+    overflow: hidden; 
+}
+.art-gal section img {
+    display: inline-block;
+    overflow: hidden;
+    opacity: .8;
+    max-width: 290px; 
+    transition:ease;
+    transition-duration: .5s;
+    width: 100%; 
+    height: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+}
+.art-gal section img:hover {
+    width: 150%;
+    height: 150%;
+    opacity: 1;
+    filter: contrast(120%);
+}
