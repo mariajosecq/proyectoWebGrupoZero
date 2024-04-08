@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('fuentes/montserrat/Montserrat-SemiBold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url('fuentes/montserrat/Montserrat-Light.otf') format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumWebLight';
+    src: url('fuentes/titilliumWeb/TitilliumWeb-Light.ttf') format('truetype');
+} 
+@font-face {
+    font-family: 'TitilliumWebBold';
+    src: url('fuentes/titilliumWeb/TitilliumWeb-Bold.ttf') format('truetype');
+} 
+
+
+
+.caja-texto{
+        border: 0px solid #000;
+        background-color: #f9f1e6;
+    }
+
+
+
+.img-autor{
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover; 
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+.img-obras img {
+    transition: transform 0.7s ease;
+}
+
+.img-obras img:hover {
+    transform: scale(1.5)
+}
+
+.img-detalleObra{
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover; 
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+.row{
+    margin-bottom: 3%;
+}
+.margen-parrafo{
+    text-align: left;
+    margin:40px;
+}
+.fuente-titulo{
+    font-family:'TitilliumWebBold', sans-serif;
+    color: #9f978c
+}
+.d-flex{
+    height: 300px; 
+}
+
+
