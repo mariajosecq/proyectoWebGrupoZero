@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('fuentes/poppins/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('fuentes/poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('fuentes/poppins/Poppins-Light.ttf') format('truetype');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -9,7 +24,7 @@
     margin-left: 20px;
     display: flex;
     margin-bottom: 10px;
-    margin-right: 120px;
+    margin-right: 0px;
 }
 
 .img-logo {
@@ -24,10 +39,12 @@
 }
 
 .nv-links {
+    font-family: 'PoppinsBold';
     margin-top: 13px;
+    display: flex;
 }
 
-.navbar .link {
+.link {
     text-decoration: none;
     margin-right: 50px;
     margin-left: 50px;
@@ -53,16 +70,18 @@
     border-bottom-left-radius: 7px;
 }
 
-.nv-buscar input.placeholder {
-    margin-left: 5px;
-    width: fit-content;
+.nv-buscar input::placeholder {
+    font-family: 'PoppinsLight';
     text-transform: capitalize;
+    padding-left: 10px;
 }
 
 .nv-buscar button {
     background-color: #1c1c1c;
     color: #f1f1f1;
+    font-family: 'PoppinsLight';
     border-width: 1px;
+    font-weight: 600;
     border: 0.5px solid #e3e3e3;
     margin-left: none;
     height: 30px;
@@ -89,10 +108,12 @@
 }
 
 .login button {
-    font-weight: 600;
+    font-family: 'PoppinsLight';
+    font-weight: 700;
+    font-size: 15px;
     text-transform: capitalize;
     height: 40px;
-    width: 100px;
+    width: 105px;
     border-radius: 7px;
     border: .5px solid #e3e3e3;
     background-color: #1c1c1c;
@@ -102,7 +123,7 @@
 .login button:hover {
     background-color: #A5FFC9;
     color: #1c1c1c;
-    font-weight: 600;
+    font-weight: 700;
     transition: 0.3S;
     text-transform: capitalize;
 }
@@ -208,6 +229,7 @@
 }
 
 .info .txt p {
+    font-family: 'PoppinsLight';
     color: #1c1c1c;
 }
 
@@ -240,6 +262,7 @@
 }
 
 .card p {
+    font-family: 'PoppinsBold';
     color: white;
     font-weight: 700;
     margin-top: 10px;
@@ -289,6 +312,7 @@
 }
 
 .form .tab-header {
+    font-family: 'PoppinsBold';
     height: 50px;
     line-height: 50px;
 }
@@ -318,6 +342,7 @@
 }
 
 .form .tab-cont .form-ele input {
+    font-family: 'PoppinsLight';
     width: 100%;
     padding: 10px;
     border: 1px solid #1c1c1c;
@@ -325,7 +350,7 @@
     background: #e3e3e3;
     border-radius: 5px;
     outline: none;
-    font-size: 13.5px;
+    font-size: 12px;
 }
 
 .form .tab-cont .form-ele input[type=checkbox] {
@@ -339,6 +364,7 @@
 }
 
 .form .tab-cont .form-ele button {
+    font-family: 'PoppinsBold';
     margin-top: 5px;
     width: 100%;
     padding: 10px;
@@ -367,10 +393,18 @@
     display: none;
 }
 
+form .tab-body .form-ele .lab-recordar {
+    font-family: 'PoppinsLight';
+    color: #1c1c1c;
+    font-size: 15px;
+}
+
 .form .tab-body .form-ele a {
+    font-family: 'PoppinsLight';
     text-decoration: none;
     color: #1c1c1c;
     margin-top: 2px;
+    font-size: 15px;
     display: flex;
 }
 
@@ -390,18 +424,10 @@
 
 .tab-body.active input.invalid {
     border: 1.5px solid red;
-    font-size: 13.5px;
+    font-size: 12px;
 }
 
 .tab-body.active input.valid {
     border: 1.5px solid green;
-    font-size: 13.5px;
-}
-
-.placeholder {
-    color: black;
-}
-
-.placeholder-error {
-    color: red;
+    font-size: 12x;
 }

@@ -1,31 +1,33 @@
 
+// Abrir, cerrar y cambiar el login
 document.addEventListener("DOMContentLoaded", function () {
     let tabpanes = document.getElementsByClassName("tab-header")[0].getElementsByTagName("div");
 
-    // Abrir, cerrar y cambiar el login
+    //abrir, cerrar y cambiar el login
     for (let i = 0; i < tabpanes.length; i++) {
         tabpanes[i].addEventListener("click", function () {
+
             document.getElementsByClassName("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
+
             tabpanes[i].classList.add("active");
+
             document.getElementsByClassName("tab-cont")[0].getElementsByClassName("tab-body active")[0].classList.remove("active");
+
             document.getElementsByClassName("tab-cont")[0].getElementsByClassName("tab-body")[i].classList.add("active");
         });
     }
 
-    // Mostrar el formulario de inicio de sesión
     document.querySelector("#mostrar-login").addEventListener("click", function () {
         console.log("Botón 'Iniciar sesión' clicado.");
         document.querySelector(".form").classList.add("open");
     });
 
-    // Cerrar el formulario de inicio de sesión
-    document.querySelector(".form .tab-cont .tab-body .cerrar-login").addEventListener("click", function () {
+    document.querySelector(".form .tab-cont .cerrar-login").addEventListener("click", function () {
         console.log("Botón 'Cerrar sesión' clicado.");
         document.querySelector(".form").classList.remove("open");
     });
 
-    document.querySelector(".form .tab-cont .tab-body.active .cerrar-login").addEventListener("click", function () {
-        console.log("Botón 'Cerrar sesión' clicado.");
+    document.querySelector(".form .tab-cont .tab-body:nth-child(2) .cerrar-login").addEventListener("click", function () {
         document.querySelector(".form").classList.remove("open");
     });
 
