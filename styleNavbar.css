@@ -153,7 +153,7 @@ form .tab-body .form-ele .lab-recordar {
 
 .navbar {
     display: flex;
-    height: 70px;
+    min-height: 70px;
     align-items: center;
     background-color: #1c1c1c;
 }
