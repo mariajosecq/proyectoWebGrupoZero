@@ -233,7 +233,7 @@ form .tab-body .form-ele .lab-recordar {
     font-size: 15px;
     text-transform: capitalize;
     height: 40px;
-    width: 105px;
+    width: 130px;
     border-radius: 7px;
     border: .5px solid #e3e3e3;
     background-color: #1c1c1c;
@@ -319,4 +319,11 @@ form .tab-body .form-ele .lab-recordar {
     opacity: 0.3;
     filter: blur(1px);
     transition: 0.5s;
+}
+
+/* pie de pagina*/
+.pie {
+    margin-top: 30px;
+    height: 150px;
+    background-color: #1c1c1c;
 }
