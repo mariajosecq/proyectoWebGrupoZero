@@ -1,76 +1,145 @@
 @font-face {
-    font-family: 'Montserrat Regular';
-    src: url('fuentes/montserrat/Montserrat-SemiBold.otf') format('truetype');
+    font-family: 'PoppinsBlack';
+    src: url('fuentes/poppins/Poppins-Black.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'Montserrat Light';
-    src: url('fuentes/montserrat/Montserrat-Light.otf') format('truetype');
+    font-family: 'PoppinsBold';
+    src: url('fuentes/poppins/Poppins-Bold.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'TitilliumWebLight';
-    src: url('fuentes/titilliumWeb/TitilliumWeb-Light.ttf') format('truetype');
-} 
-@font-face {
-    font-family: 'TitilliumWebBold';
-    src: url('fuentes/titilliumWeb/TitilliumWeb-Bold.ttf') format('truetype');
-} 
-
-
-
-.caja-texto{
-        border: 0px solid #000;
-        background-color: #f9f1e6;
-    }
-
-
-
-.img-obra{
-    width: 450px; 
-    height: 450px; 
-    object-fit: cover; 
-    margin-bottom: 9%;
-    margin-right: 9%;
+    font-family: 'PoppinsLight';
+    src: url('fuentes/poppins/Poppins-Light.ttf') format('truetype');
 }
 
-.img-obras img {
-    transition: transform 0.7s ease;
-}
-
-.img-obras img:hover {
-    transform: scale(1.5)
-}
-
-.img-detalleObra{
-    width: 300px; 
-    height: 300px; 
-    object-fit: cover; 
-    margin-bottom: 5%;
-    margin-right: 5%;
-}
-.row{
-    margin-bottom: 3%;
-}
-.margen-parrafo{
-    text-align: left;
-    margin:90px;
-}
-.fuente-titulo{
-    font-family:'TitilliumWebBold', sans-serif;
-    color: #9f978c
-}
-.d-flex{
-    height: 450px; 
-}
-
-.caja-texto h6 {
-    font-weight: bold;
-}
-
-body {
-    background-image: url(img/degradado-banco.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: sans-serif;
+* {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
+
+/* informacion y detalle de la obra*/
+.container-fluid .info {
+    display: flex;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.container-fluid .info .detalle {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #1c1c1c;
+    background-color: #1c1c1c;
+}
+
+.container-fluid .info .img-obra{
+    height: 350px;
+    width: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    overflow: hidden; 
+}
+
+.container-fluid .info .img-obra img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.container-fluid .info .desc {
+    align-content: center;
+    color: #1c1c1c;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+.container-fluid .info .desc h3 {
+    text-transform: uppercase;
+    font-family: 'PoppinsBold';
+}
+
+.container-fluid .info .desc p {
+    font-family: 'PoppinsLight';
+}
+
+
+/* Tarjetas */
+.gal {
+    margin-top: 30px;
+}
+
+
+.gal .titulo {
+    font-family: 'PoppinsBold';
+    height: 70px;
+    align-content: center;
+    background-color: #1c1c1c;
+    color: white;
+    text-transform: uppercase;
+}
+
+.carr {
+    background-image: url(img/img-principal/degradado-negro.png);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carr .card {
+    margin-top: 50px;
+    display: inline-flex;
+    height: 470px;
+    align-items: center;
+    border: none;
+    background-color: #1c1c1c;
+    margin-left: 25px;
+    margin-right: 25px;
+    opacity: 0.8;
+}
+
+.card .img a img {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 400px;
+    width: 250px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.card p {
+    font-family: 'PoppinsBold';
+    color: white;
+    font-weight: 700;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.card:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.card:hover .img a img:hover {
+    width: 350px;
+    filter: contrast(120%);
+}
+
+.gal:hover .card:not(:hover) {
+    filter: blur(0.5px);
+    transition: 0.3s;
+}
+
+
