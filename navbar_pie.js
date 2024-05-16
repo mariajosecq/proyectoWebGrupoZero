@@ -70,7 +70,6 @@ footer.innerHTML = `
             <p>Fono:9999999999</p>
             <p>info@grupozero.com</p>
         </div>
-
     </div>
 `;
 
