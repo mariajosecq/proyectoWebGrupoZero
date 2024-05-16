@@ -1,4 +1,4 @@
-const header =document.querySelector('header');
+const header = document.querySelector('header');
 
 header.innerHTML = `
    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -58,7 +58,7 @@ header.innerHTML = `
    </nav>
 `;
 
-const footer =document.querySelector('footer');
+const footer = document.querySelector('footer');
 
 footer.innerHTML = `
     <div class="pie">
@@ -72,4 +72,57 @@ footer.innerHTML = `
         </div>
 
     </div>
+`;
+
+const iniciarSesion = document.querySelector('formIniciarSesion');
+iniciarSesion.innerHTML = `
+<!--Formulario para iniciar sesion y Crear cuenta-->
+<form class="form" novalidate>
+    <div class="tab-header">
+        <div class="active">Crear Cuenta</div>
+        <div>Iniciar Sesion</div>
+    </div>
+    <div class="tab-cont">
+        <div class="tab-body active">
+            <div class="form-ele">
+                <input type="email" placeholder="Email" class="newmail">
+            </div>
+            <div class="form-ele">
+                <input type="text" placeholder="Nombre" class="newname">
+            </div>
+            <div class="form-ele">
+                <input type="password" placeholder="Contraseña" class="newpass">
+            </div>
+            <div class="form-ele">
+                <button type="submit" class="btn-crear">Crear Cuenta</button>
+            </div>
+            <div class="form-ele">
+                <div class="cerrar-login">&times;</div>
+            </div>
+        </div>
+        <div class="tab-body" dir="tab-body-accs">
+            <div class="form-ele">
+                <input type="email" placeholder="Email" class="email">
+            </div>
+            <div class=" form-ele">
+                <input type="password" placeholder="Contraseña" class="pass">
+            </div>
+            <div class="form-ele">
+                <input type="checkbox" id="recordar">
+                <label for="recordarme">Recordarme</label>
+            </div>
+            <div class="form-ele">
+                <button type="submit" class="btn-acceder">Ingresar</button>
+            </div>
+            <div class="form-ele">
+                <a href="#">
+                    <center>¿Olvidaste tu contraseña?</center>
+                </a>
+            </div>
+            <div class="form-ele">
+                <div class="cerrar-login">&times;</div>
+            </div>
+        </div>
+    </div>
+</form>
 `;
