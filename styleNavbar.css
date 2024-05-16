@@ -99,7 +99,7 @@
     display: none;
 }
 
-form .tab-body .form-ele .lab-recordar {
+.form .tab-body .form-ele .lab-recordar {
     font-family: 'PoppinsLight';
     color: #1c1c1c;
     font-size: 15px;
@@ -143,6 +143,7 @@ form .tab-body .form-ele .lab-recordar {
 
 .img-logo {
     height: 55px;
+    margin-right: 30px;
 }
 
 .nav-link{
@@ -154,7 +155,38 @@ form .tab-body .form-ele .lab-recordar {
 .navbar-nav{
     margin-left: 30px;
     margin-right: 30px;
+    
+    
 }
+.navbar-login{
+    margin-left: 30px;
+    margin-right: 30px;
+    white-space: nowrap;
+  
+}
+
+.navbar-blog {
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: transparent;
+    white-space: nowrap;
+    border: none; 
+}
+.navbar-blog .btn-link {
+    color: #b5b5b5; /* Color de texto blanco */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: color 0.3s;
+    font-weight: bold;
+    font-family: 'PoppinsBold'; /* Agrega una transición suave para el cambio de color */
+}
+
+/* Estilo de hover para el enlace */
+.navbar-blog .btn-link:hover {
+    color: #f1f1f1; /* Cambia el color de texto a gris cuando el mouse pasa sobre el enlace */
+}
+
+
+
 
 .dropdown-menu{
     font-family: 'PoppinsBold';
@@ -180,10 +212,10 @@ form .tab-body .form-ele .lab-recordar {
 }
 
 .textoPie{
-    margin: 20px;
-   color: #e3e3e3;   
-   font-family: 'PoppinsLight';
-   width: 200px;
+        margin: 20px;
+    color: #e3e3e3;   
+    font-family: 'PoppinsLight';
+    width: 200px;
 }
 
 .pie .textoPie h5{
@@ -202,3 +234,4 @@ form .tab-body .form-ele .lab-recordar {
     height: 100px;
    
 }
+

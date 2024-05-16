@@ -10,6 +10,13 @@ header.innerHTML = `
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
            </button>
+
+           <div>
+                <button type="button" class="navbar-blog btn-outline-light">
+                    <a href="hrl.." class="btn-link">BLOG</a>
+                </button>    
+           </div>
+
            <!--Desplegables-->
            <div class="collapse navbar-collapse" id="navbarNav">
                <ul class="navbar-nav">
@@ -40,11 +47,12 @@ header.innerHTML = `
            <!--Buscador-->
            <form class="d-flex busqueda" role="search">
                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-               <button class="btn btn-outline-success" type="submit">Buscar</button>
+               <button class="btn btn-outline-light" type="submit">Buscar</button>
            </form>
            <!-- Botón de Iniciar Sesión -->
+           
            <div class="login">
-               <button class="btn btn-outline-success me-2" id="mostrar-login" type="button">Iniciar sesion</button>
+               <button type="button" class="navbar-login btn btn-outline-light" id="mostrar-login">INICIAR SESION</button>
            </div>
        </div>
    </nav>
@@ -54,14 +62,14 @@ const footer =document.querySelector('footer');
 
 footer.innerHTML = `
     <div class="pie">
-    <div class="imagenPie">
-        <img src="img/img-principal/logo-blanco.png" alt="logo">
-    </div>
-    <div class="textoPie">
-        <u><b><h5>Contacto</h5></u></b>
-        <p>Fono:9999999999</p>
-        <p>info@grupozero.com</p>
-    </div>
+        <div class="imagenPie">
+            <img src="img/img-principal/logo-blanco.png" alt="logo">
+        </div>
+        <div class="textoPie">
+            <u><b><h5>Contacto</h5></u></b>
+            <p>Fono:9999999999</p>
+            <p>info@grupozero.com</p>
+        </div>
 
     </div>
 `;
