@@ -36,9 +36,3 @@ document.getElementById("CorreoForm").addEventListener("submit", function (event
     alert("Ocurrió un error. Por favor intente más tarde.");
   });
 });
-
-
-//agregar lo siguiente a cada página
-//<script src="contacto.js"></script>
-//<script src="https://apis.google.com/js/api.js"></script>
-//<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
