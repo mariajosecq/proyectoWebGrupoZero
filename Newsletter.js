@@ -1,8 +1,9 @@
 const formNewsLetter = document.querySelector('.formNewsLetter');
 formNewsLetter.innerHTML = `
-<div class="formNewsLetter">
+<div class="formNewsLetter cerrarform">
 <div class="imagen"></div>
-<div class="formulario">
+<form id="form" novalidate class="formulario">
+    <div class="cerrar"><a href="">x</a></div>
     <h3>Ingresa tus datos y <br> mantente informado</h3>
     <div class="newsletterinput">
         <label for="nombre">Nombre:</label>
@@ -17,9 +18,9 @@ formNewsLetter.innerHTML = `
         <input type="email" id="email" placeholder=" Ingrese su email">
     </div>
     <div class="newsletterinput">
-        <button type="submit" class="btn-acceder">Ingresar</button>
+        <button type="submit" id="btn-acceder">Unirse</button>
     </div>
-</div>
+</form>
 </div>
 `;
 
@@ -27,7 +28,7 @@ const popOver = document.querySelector('.avisoNewsLetter');
 popOver.innerHTML = `
 <div class="aviso">
     <div class="espacio">
-        <button id="newsletter">Únete a nuestro newsletter</button>
+        <button class="newsletter">Únete a nuestro newsletter</button>
         <div class="cerrar"><a href="">x</a></div>
     </div>
 </div>
@@ -35,9 +36,85 @@ popOver.innerHTML = `
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    document.querySelector("#newsletter").addEventListener("click", function () {
+    // abrir el formulario
+    document.querySelector(".newsletter").addEventListener("click", function () {
         console.log("botón unirse newsletter clicado.");
+        document.querySelector(".formNewsLetter .cerrarform").classList.remove("cerrarform");
+    });
 
-        document.querySelector(".formNewsLetter").classList.add("abrirform");
+    // cerrar el formulario
+    document.querySelector(".formulario .cerrar a").addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log("botón cerrar newsletter clicado.");
+        document.querySelector(".formNewsLetter").classList.add("cerrarform");
+    });
+
+    // cerrar el popOver
+    document.querySelector(".aviso .cerrar a").addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log("botón cerrar popOver clicado.");
+        document.querySelector(".aviso").classList.add("cerrarform");
+    });
+
+    //validacion de formulario
+    const form = document.getElementById("form");
+    const nombre = document.getElementById("nombre");
+    const apellido = document.getElementById("apellido");
+    const email = document.getElementById("email");
+
+    function validarEmail(mail) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(mail);
+    }
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        console.log("revisando formulario");
+
+        let a = 0;
+
+        if (nombre.value.length < 4) {
+            nombre.classList.remove("verde");
+            nombre.classList.add("rojo");
+            nombre.value = "";
+            nombre.placeholder = 'nombre muy corto (min. 4 caracteres)';
+            a += 1;
+            console.log("nombre no válido");
+        } else {
+            nombre.classList.remove("rojo");
+            nombre.classList.add("verde");
+            console.log("nombre válido");
+        }
+
+        if (apellido.value.length < 4) {
+            apellido.classList.remove("verde");
+            apellido.classList.add("rojo");
+            apellido.value = "";
+            apellido.placeholder = 'apellido muy corto (min. 4 caracteres)';
+            a += 1;
+            console.log("apellido no válido");
+        } else {
+            apellido.classList.remove("rojo");
+            apellido.classList.add("verde");
+            console.log("apellido válido");
+        }
+
+        if (!validarEmail(email.value)) {
+            email.classList.remove("verde");
+            email.classList.add("rojo");
+            email.value = "";
+            email.placeholder = 'formato de email no válido';
+            a += 1;
+            console.log("email no válido");
+        } else {
+            email.classList.remove("rojo");
+            email.classList.add("verde");
+            console.log("email válido");
+        }
+
+        if (a === 0) {
+            form.submit();
+            console.log("formulario enviado con éxito");
+        }
     });
 });
