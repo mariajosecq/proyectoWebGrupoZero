@@ -212,7 +212,7 @@
 }
 
 .textoPie{
-        margin: 20px;
+    margin: 20px;
     color: #e3e3e3;   
     font-family: 'PoppinsLight';
     width: 200px;
@@ -235,3 +235,69 @@
    
 }
 
+
+/*Modal Envío de correo*/
+.modal-content{
+    border-radius: 5px !important;
+    border: 1px solid #e3e3e3!important;
+}
+.boton-modal{
+    color: #483f34;
+    background-color: transparent !important;
+    border-color: #000000 !important;
+    border-radius: 5px; 
+    font-size: large;
+}
+.modal-header{
+    background-color: #1c1c1c; 
+}
+.modal-title{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.modal-header .btn-close{
+    margin-right: 15px !important;
+    background-color: #e3e3e3;
+}
+.modal-footer{
+    margin-right: 25px;
+    margin-bottom: 20px;
+    border: 0px !important;
+}
+.form-control::placeholder {
+    color: #999 !important; 
+    opacity: 0.5 !important; 
+}
+.modal-body{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.fuente-titulo-negro{
+    font-family:'PoppinsBold', sans-serif;
+    color: #1c1c1c;
+}
+.fuente-titulo-blanco{
+    font-family:'PoppinsBold', sans-serif;
+    color: #e3e3e3;
+}
+.fuente-parrafo-negro{
+    font-family: 'PoppinsLight';
+    font-size:medium;
+    color: #1c1c1c;
+}
+.fuente-parrafo-blanco{
+    font-family: 'PoppinsLight';
+    font-size:medium;
+    color: #e3e3e3;
+}
+
+/*Botones*/
+.boton-correo {
+    
+    margin: 20px;
+    color: #e3e3e3;
+    background-color: #1c1c1c;   
+    font-family: 'PoppinsLight';
+    width: 200px;
+}

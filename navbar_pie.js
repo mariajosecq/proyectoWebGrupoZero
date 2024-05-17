@@ -13,7 +13,7 @@ header.innerHTML = `
 
            <div>
                 <button type="button" class="navbar-blog btn-outline-light">
-                    <a href="hrl.." class="btn-link">BLOG</a>
+                    <a href="blog.html" class="btn-link">BLOG</a>
                 </button>    
            </div>
 
@@ -59,7 +59,6 @@ header.innerHTML = `
 `;
 
 const footer = document.querySelector('footer');
-
 footer.innerHTML = `
     <div class="pie">
         <div class="imagenPie">
@@ -68,7 +67,45 @@ footer.innerHTML = `
         <div class="textoPie">
             <u><b><h5>Contacto</h5></u></b>
             <p>Fono:9999999999</p>
-            <p>info@grupozero.com</p>
+
+            <!--Modal para enviar correo con API-->
+            <!--Botón correo-->
+            <button type="button" class="boton-correo" data-bs-toggle="modal" data-bs-target="#ModalCorreo">
+                <b>info@grupozero.com</b>
+            </button>
+            <!Modal-->
+            <div class="modal" tabindex="-1" id="ModalCorreo">
+                <div class="modal-dialog modal-s">
+                    <div class="modal-content">
+                        <div class="modal-header fuente-titulo-blanco">
+                            <h5 class="modal-title">ENVIAR CORREO</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body fuente-parrafo-negro">
+                            <!-- Forulario -->
+                            <form id="CorreoForm">
+                                <div class="mb-4">
+                                    <label for="FormControlNombre" class="form-label">Nombre</label>
+                                    <textarea class="form-control" id="FormControlNombre" rows="1"></textarea>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email">Correo:</label>
+                                    <input type="email" id="email" name="email" class="form-control fuente-parrafo-negro">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="FormControlMensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control fuente-parrafo-negro" id="FormControlMensaje" rows="5"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <!-- Ensure this button is of type submit -->
+                                    <button type="submit" class="btn boton-modal">Enviar correo</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 `;
