@@ -37,9 +37,11 @@ popOver.innerHTML = `
 document.addEventListener("DOMContentLoaded", function () {
 
     // abrir el formulario
-    document.querySelector(".newsletter").addEventListener("click", function () {
-        console.log("botón unirse newsletter clicado.");
-        document.querySelector(".formNewsLetter .cerrarform").classList.remove("cerrarform");
+    document.querySelectorAll(".boton-unirse, .newsletter").forEach(function (button) {
+        button.addEventListener("click", function () {
+            console.log("botón de newsletter clicado.");
+            document.querySelector(".formNewsLetter .cerrarform").classList.remove("cerrarform");
+        });
     });
 
     // cerrar el formulario
