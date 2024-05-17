@@ -174,3 +174,7 @@
     color: #1c1c1c;
     font-size: 15px;
 }
+
+.avisoNewsLetter {
+    display: none !important;
+}

@@ -23,7 +23,11 @@ formNewsLetter.innerHTML = `
 </form>
 </div>
 `;
-if (window.location.pathname !== "blog.html"){
+
+if (window.location.pathname === "/blog.html") {
+    // Ocultar el popover
+    document.querySelector(".avisoNewsLetter").style.display = "none";
+}else{
     const popOver = document.querySelector('.avisoNewsLetter');
     popOver.innerHTML = `
     <div class="aviso">
@@ -33,7 +37,7 @@ if (window.location.pathname !== "blog.html"){
         </div>
     </div>
     `;
-}
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // abrir el formulario
@@ -50,15 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("botón cerrar newsletter clicado.");
         document.querySelector(".formNewsLetter").classList.add("cerrarform");
     });
-    
-    if (window.location.pathname !== "blog.html"){
-        // cerrar el popOver
-        document.querySelector(".aviso .cerrar a").addEventListener("click", function (event) {
-            event.preventDefault();
-            console.log("botón cerrar popOver clicado.");
-            document.querySelector(".aviso").classList.add("cerrarform");
-        });
-    }    
+
+    // cerrar el popOver
+    document.querySelector(".aviso .cerrar a").addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log("botón cerrar popOver clicado.");
+        document.querySelector(".aviso").classList.add("cerrarform");
+    });  
 
     //validacion de formulario
     const form = document.getElementById("form");
@@ -122,4 +124,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
+}
