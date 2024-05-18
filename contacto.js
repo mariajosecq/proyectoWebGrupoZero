@@ -19,7 +19,7 @@ document.getElementById("CorreoForm").addEventListener("submit", function (event
     method: "POST",
     headers: {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "c93d3e38f5msh2ceb44f36f4acdep1b346ajsn916d7262622b",
+      "X-RapidAPI-Key": "6d58743deemsh434f1b8ec73b5d2p16f805jsn5801a42d37d5",
       "X-RapidAPI-Host": "mail-sender-api1.p.rapidapi.com"
     },
     processData: false,
