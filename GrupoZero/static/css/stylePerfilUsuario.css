@@ -1,12 +1,12 @@
 /*Fuentes*/
 @font-face {
     font-family: 'PoppinsBold';
-    src: url('fuentes/poppins/Poppins-Bold.ttf') format('truetype');
-} 
+    src: url("{% static 'fuentes/poppins/Poppins-Bold.ttf'%}") format('truetype');
+}
 @font-face {
     font-family: 'PoppinsLight';
-    src: url('fuentes/poppins/Poppins-Light.ttf') format('truetype');
-} 
+    src: url("{% static 'fuentes/poppins/Poppins-Light.ttf'%}") format('truetype');
+}
 .fuente-titulo-negro{
     font-family:'PoppinsBold', sans-serif;
     color: #1c1c1c;

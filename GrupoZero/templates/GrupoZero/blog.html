@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,17 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="styleBlog.css">
-    <link rel="stylesheet" href="styleNavbar.css">
-    <link rel="stylesheet" href="styleNewsletter.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styleBlog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleNavbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleNewsletter.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}   
 </head>
-
-<body class="blog-page">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 
     <!--Barra de Navegación-->
     <header></header>
@@ -45,7 +43,7 @@
                     <div class="contenido-publicacion">
                         <!--Foto de publicación-->
                         <div class="d-flex foto-perfil justify-content-center align-items-center">
-                            <img src="img/img-blog/publicacion1.jpg" alt="Imagen Publicación 1" class="img-rectangulo">
+                            <img src="{% static 'img/img-blog/publicacion1.jpg' %}" alt="Imagen Publicación 1" class="img-rectangulo">
                         </div>
                         <br>
                         <h3 class="fuente-titulo-negro">Un nuevo 'caravaggio' divide al mundo del arte</h3>
@@ -90,7 +88,7 @@
 
                         <!--Foto de publicación-->
                         <div class="d-flex foto-perfil justify-content-center align-items-center">
-                            <img src="img/img-blog/publicacion2.jpg" alt="Imagen Publicación 1" class="img-rectangulo">
+                            <img src="{% static 'img/img-blog/publicacion2.jpg' %}" alt="Imagen Publicación 1" class="img-rectangulo">
                         </div>
                         <br>
                         <h3 class="fuente-titulo-negro">Picasso S.A., una máquina de pintar dinero</h3>
@@ -209,9 +207,9 @@
     <!-- Pie de la pagina Web -->
     <footer></footer>
 
-    <script src="navbar_pie.js"></script>
-    <script src="Newsletter.js"></script>
-    <script src="contacto.js"></script>
+    <script src="{% static 'js/navbar_pie.js' %}"></script>
+    <script src="{% static 'js/Newsletter.js' %}"></script>
+    <script src="{% static 'js/contacto.js' %}"></script>
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
