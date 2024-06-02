@@ -2,10 +2,6 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def index(request):
-    context={}
-    return render(request,'GrupoZero/index.html',context)
-
 def principal(request):
     context={}
     return render(request,'GrupoZero/principal.html',context)

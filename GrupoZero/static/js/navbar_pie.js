@@ -5,7 +5,7 @@ header.innerHTML = `
        <div class="container-fluid d-flex justify-content-between align-items-center">
            <!--Logo-->
            <a href="principal.html">
-               <img class="img-logo" src="img/img-principal/logo-blanco.png" alt="LOGO">
+               <img class="img-logo" src="{%satic 'img/img-principal/logo-blanco.png'%}" alt="LOGO">
            </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
